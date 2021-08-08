@@ -40,6 +40,8 @@ target_include_directories(tinynurbs INTERFACE $<BUILD_INTERFACE:${CMAKE_CURRENT
 
 add_custom_target(tinynurbs_dummy SOURCES ${HEADER_FILES} CMakeLists.txt)
 
+install(DIRECTORY include/ DESTINATION include)
+
 if(BUILD_TESTS)
     enable_testing()
     add_subdirectory(tests)
